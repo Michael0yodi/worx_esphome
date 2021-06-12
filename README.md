@@ -12,7 +12,7 @@ Stop -> Stop/Pause<br>
 Home -> Return to base<br>
 Reset -> Reset blocked by xx<br>
 <br>
-Simply added as a Vacuum in Home Assistant for now.
+Simply added as a Vacuum in Home Assistant for now via ESPHome.
 
 ![alt text](https://github.com/Michael0yodi/worx_esphome/blob/main/worx_79x_iot.png)
 ![alt text](https://github.com/Michael0yodi/worx_esphome/blob/main/worx_79x_keypad.png)
