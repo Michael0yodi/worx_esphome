@@ -1,7 +1,7 @@
 # worx_esphome
 
-Using optocouplers to emulate keypad and attaching on cutter motor and charging as sensors.
-Its possible to attach on additional sensors/keyboard if needed, all Hall sensors are running on 5v logic.
+Using optocouplers to emulate keypad and attaching cutter motor and charging cable as binary sensors.
+Its possible to attach additional sensors/keyboard if needed -if you have enough GPIO's avilable, all Hall sensors are running on 5v logic.
 You can even attach two multiplexers emulating the full matrix keyboard (but without visual feedback the use is limited)
 
 I ended up with this as a test:
