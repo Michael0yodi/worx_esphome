@@ -6,12 +6,12 @@ You can even attach two multiplexers emulating the full matrix keyboard (but wit
 
 I ended up with this as a test:
 
-Supports emulated keypress for:
-Start –> Mowing
-Stop -> Stop/Pause
-Home -> Return to base
-Reset -> Reset blocked by xx
-
+Supports emulated keypress for:<br>
+Start –> Mowing<br>
+Stop -> Stop/Pause<br>
+Home -> Return to base<br>
+Reset -> Reset blocked by xx<br>
+<br>
 Simply added as a Vacuum in Home Assistant for now.
 
 ![alt text](https://github.com/Michael0yodi/worx_esphome/blob/main/worx_79x_iot.png)
