@@ -1,0 +1,30 @@
+vacuum:
+- platform: template
+    vacuums:
+      bettan_lawnmower:
+        value_template: '{{ states.vacuum.bettan_lawnmower.attributes.status }}'
+        attribute_templates: 
+          status: >-
+            {% if states('binary_sensor.charging') == "On" %}
+              docked
+            {% elif states('binary_sensor.mowing') == "On" %}
+              cleaning
+            {% else %}
+              idle
+            {% endif %}
+        start:
+          - service: switch.turn_on
+            target:         
+              entity_id: switch.start
+        pause:
+          - service: switch.turn_on
+            target:
+              entity_id: switch.stop
+        stop:
+          - service: switch.turn_on
+            target:
+              entity_id: switch.stop
+        return_to_base:
+          - service: switch.turn_on
+            target:
+              entity_id: switch.home
