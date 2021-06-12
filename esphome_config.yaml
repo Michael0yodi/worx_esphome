@@ -1,0 +1,140 @@
+esphome:
+  name: myname
+  platform: ESP8266
+  board: d1_mini
+
+wifi:
+  ssid: "SSID"
+  password: "mysecretpassword"
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "myname Fallback Hotspot"
+    password: "mysecretpassword"
+
+captive_portal:
+
+# Enable logging
+logger:
+  baud_rate: 0
+
+# Enable Home Assistant API
+api:
+
+ota:
+
+###############################################
+
+binary_sensor:
+  - platform: gpio
+    pin: GPIO3
+    name: "Mowing"
+    filters:
+      - invert:
+      - delayed_off: 1000ms
+      - delayed_on: 1000ms
+
+  - platform: gpio
+    pin: D1
+    name: "Charging"
+    filters:
+      - invert:
+      - delayed_off: 1000ms
+      - delayed_on: 1000ms
+
+switch:
+#Buttons
+  - platform: gpio
+    pin: D8 #Home
+    name: "KB_Home"
+    id: R8
+    on_turn_on:
+    - delay: 200ms
+    - switch.turn_off: R8
+    
+  - platform: gpio
+    pin: D7 #Stop
+    name: "Stop"
+    id: R7
+    on_turn_on:
+    - delay: 200ms
+    - switch.turn_off: R7
+    
+  - platform: gpio
+    pin: D6 #0
+    name: "KB_0"
+    id: R6
+    on_turn_on:
+    - delay: 200ms
+    - switch.turn_off: R6
+    
+  - platform: gpio
+    pin: D5 # Start
+    name: "KB_Start"
+    id: R5
+    on_turn_on:
+    - delay: 200ms
+    - switch.turn_off: R5
+
+#Hall Sensor
+  - platform: gpio
+    pin: D2
+    name: "Hall_Lid"
+    restore_mode: ALWAYS_ON
+    id: R2
+
+### Actions
+  - platform: template
+    name: "Start"
+    id: Start
+    turn_on_action:
+    - switch.turn_on: R7
+    - delay: 200ms
+    - switch.turn_off: R7
+    - delay: 500ms
+    - switch.turn_off: R2
+    - delay: 1000ms
+    - switch.turn_on: R5
+    - delay: 200ms
+    - switch.turn_off: R5
+    - delay: 1000ms
+    - switch.turn_on: R2
+
+### Actions
+  - platform: template
+    name: "Stop"
+    id: Stop
+    turn_on_action:
+    - switch.turn_on: R7
+    - delay: 200ms
+    - switch.turn_off: R7
+
+### Actions
+  - platform: template
+    name: "Home"
+    id: Home
+    turn_on_action:
+    - switch.turn_on: R7
+    - delay: 200ms
+    - switch.turn_off: R7
+    - delay: 500ms
+    - switch.turn_off: R2
+    - delay: 1000ms
+    - switch.turn_on: R8
+    - delay: 200ms
+    - switch.turn_off: R8
+    - delay: 1000ms
+    - switch.turn_on: R2
+
+### Actions
+  - platform: template
+    name: "Reset"
+    id: Reset
+    turn_on_action:
+    - switch.turn_off: R2
+    - delay: 1000ms
+    - switch.turn_on: R6
+    - delay: 200ms
+    - switch.turn_off: R6
+    - delay: 1000ms
+    - switch.turn_on: R2
