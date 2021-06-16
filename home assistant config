@@ -5,9 +5,9 @@ vacuum:
         value_template: '{{ states.vacuum.bettan_lawnmower.attributes.status }}'
         attribute_templates: 
           status: >-
-            {% if states('binary_sensor.charging') == "On" %}
+            {% if states('binary_sensor.charging') == "on" %}
               docked
-            {% elif states('binary_sensor.mowing') == "On" %}
+            {% elif states('binary_sensor.mowing') == "on" %}
               cleaning
             {% else %}
               idle
