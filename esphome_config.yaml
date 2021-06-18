@@ -31,7 +31,7 @@ binary_sensor:
     name: "Mowing"
     filters:
       - invert:
-      - delayed_off: 1000ms
+      - delayed_off: 60000ms
       - delayed_on: 1000ms
 
   - platform: gpio
@@ -39,7 +39,7 @@ binary_sensor:
     name: "Charging"
     filters:
       - invert:
-      - delayed_off: 1000ms
+      - delayed_off: 60000ms
       - delayed_on: 1000ms
 
 switch:
@@ -54,7 +54,7 @@ switch:
     
   - platform: gpio
     pin: D7 #Stop
-    name: "Stop"
+    #name: "Stop"
     id: R7
     on_turn_on:
     - delay: 200ms
@@ -83,7 +83,7 @@ switch:
     restore_mode: ALWAYS_ON
     id: R2
 
-### Actions
+### Action Start
   - platform: template
     name: "Start"
     id: Start
@@ -100,7 +100,7 @@ switch:
     - delay: 1000ms
     - switch.turn_on: R2
 
-### Actions
+### Action Stop
   - platform: template
     name: "Stop"
     id: Stop
@@ -109,7 +109,7 @@ switch:
     - delay: 200ms
     - switch.turn_off: R7
 
-### Actions
+### Action Home
   - platform: template
     name: "Home"
     id: Home
@@ -126,7 +126,7 @@ switch:
     - delay: 1000ms
     - switch.turn_on: R2
 
-### Actions
+### Action Reset
   - platform: template
     name: "Reset"
     id: Reset
