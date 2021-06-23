@@ -6,7 +6,10 @@ Using optocouplers to emulate keypad and attaching cutter motor and charging cab
 Its possible to attach additional sensors/keyboard if needed -if you have enough GPIO's avilable, all Hall sensors are running on 5v logic.
 You can even attach two multiplexers emulating the full matrix keyboard (but without visual feedback the use is limited)
 
-I ended up with this as a test:
+Video of mower in action
+[a link](https://youtu.be/NY6L3iWkB_4)
+
+I ended up with this:
 
 Supports emulated keypress for:<br>
 Start –> Mowing<br>
