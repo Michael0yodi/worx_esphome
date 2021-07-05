@@ -22,6 +22,7 @@ Simply added as a Vacuum in Home Assistant for now via ESPHome.
 ![alt text](https://github.com/Michael0yodi/worx_esphome/blob/main/worx_79x_iot.png)
 <br>
 A Matrix keyboard is arranged in rows and columns, if a key is pressed, a column wire makes contact with a row wire, hence a key have been pressed.
+<br>
 ![alt text](https://github.com/Michael0yodi/worx_esphome/blob/main/worx_79x_keypad.png)
 ![alt text](https://github.com/Michael0yodi/worx_esphome/blob/main/worx-5v.png)
 ![alt text](https://github.com/Michael0yodi/worx_esphome/blob/main/worx-charging.png)
