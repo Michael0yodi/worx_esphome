@@ -28,14 +28,14 @@ A Matrix keyboard is arranged in rows and columns, if a key is pressed, a column
 <br>
 <br>
 
-![alt text](https://github.com/Michael0yodi/worx_esphome/blob/main/worx_79x_keypad.png)
-![alt text](https://github.com/Michael0yodi/worx_esphome/blob/main/worx-5v.png)
-![alt text](https://github.com/Michael0yodi/worx_esphome/blob/main/worx-charging.png)
-![alt text](https://github.com/Michael0yodi/worx_esphome/blob/main/worx-keyboard.png)
-![alt text](https://github.com/Michael0yodi/worx_esphome/blob/main/worx-motor.png)
-![alt text](https://github.com/Michael0yodi/worx_esphome/blob/main/worx-stop.png)
-![alt text](https://github.com/Michael0yodi/worx_esphome/blob/main/worx-ha1.png)
-![alt text](https://github.com/Michael0yodi/worx_esphome/blob/main/worx-ha2.png)
+![alt text](https://github.com/Michael0yodi/worx_esphome/blob/main/worx_79x_keypad.png)<br>
+![alt text](https://github.com/Michael0yodi/worx_esphome/blob/main/worx-5v.png)<br>
+![alt text](https://github.com/Michael0yodi/worx_esphome/blob/main/worx-charging.png)<br>
+![alt text](https://github.com/Michael0yodi/worx_esphome/blob/main/worx-keyboard.png)<br>
+![alt text](https://github.com/Michael0yodi/worx_esphome/blob/main/worx-motor.png)<br>
+![alt text](https://github.com/Michael0yodi/worx_esphome/blob/main/worx-stop.png)<br>
+![alt text](https://github.com/Michael0yodi/worx_esphome/blob/main/worx-ha1.png)<br>
+![alt text](https://github.com/Michael0yodi/worx_esphome/blob/main/worx-ha2.png)<br>
 
 
 
