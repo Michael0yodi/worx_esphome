@@ -20,6 +20,7 @@ Reset -> Reset blocked by xx<br>
 Simply added as a Vacuum in Home Assistant for now via ESPHome.
 
 [PCB and Schematic](https://oshwlab.com/yodi/worx79x)
+<br><br>
 ![PCB](https://github.com/Michael0yodi/worx_esphome/blob/main/worx_79x_pcb.png)
 
 <br>
