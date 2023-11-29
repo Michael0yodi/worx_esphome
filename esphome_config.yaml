@@ -47,18 +47,18 @@ switch:
   - platform: gpio
     pin: D8 #Home
     name: "KB_Home"
-    id: R8
-    on_turn_on:
-    - delay: 200ms
-    - switch.turn_off: R8
-    
-  - platform: gpio
-    pin: D7 #Stop
-    #name: "Stop"
     id: R7
     on_turn_on:
     - delay: 200ms
     - switch.turn_off: R7
+    
+  - platform: gpio
+    pin: D7 #Stop
+    #name: "Stop"
+    id: R8
+    on_turn_on:
+    - delay: 200ms
+    - switch.turn_off: R8
     
   - platform: gpio
     pin: D6 #0
@@ -88,9 +88,9 @@ switch:
     name: "Start"
     id: Start
     turn_on_action:
-    - switch.turn_on: R7
+    - switch.turn_on: R8
     - delay: 200ms
-    - switch.turn_off: R7
+    - switch.turn_off: R8
     - delay: 500ms
     - switch.turn_off: R2
     - delay: 1000ms
@@ -105,24 +105,24 @@ switch:
     name: "Stop"
     id: Stop
     turn_on_action:
-    - switch.turn_on: R7
+    - switch.turn_on: R8
     - delay: 200ms
-    - switch.turn_off: R7
+    - switch.turn_off: R8
 
 ### Action Home
   - platform: template
     name: "Home"
     id: Home
     turn_on_action:
-    - switch.turn_on: R7
-    - delay: 200ms
-    - switch.turn_off: R7
-    - delay: 500ms
-    - switch.turn_off: R2
-    - delay: 1000ms
     - switch.turn_on: R8
     - delay: 200ms
     - switch.turn_off: R8
+    - delay: 500ms
+    - switch.turn_off: R2
+    - delay: 1000ms
+    - switch.turn_on: R7
+    - delay: 200ms
+    - switch.turn_off: R7
     - delay: 1000ms
     - switch.turn_on: R2
 
